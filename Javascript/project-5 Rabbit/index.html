@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body{
+        background-color: black;
+      }
+      section{
+        display: flex;
+        flex-direction: column;
+      }
+      img{
+        width: 250px;
+        height: auto;
+        margin: 0 auto;
+      }
+      .find:hover{
+        cursor: pointer;
+        border: none;
+      }
+      .find{
+        display: block;
+        width: 150px;
+        text-align: center;
+        margin: 0 auto;
+        border : none;
+        color: white;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <button class="find"> Fine a rabbit </button>
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/rabbit.png" alt="rabbit-img" class="rabbit">
+      <img src="./img/carrot.png" alt="carrot-img">
+      <img src="./img/carrot.png" alt="carrot-img">
+    </section>
+
+    <script>
+      const fine = document.querySelector('.find');
+      const rabbit = document.querySelector('.rabbit');
+
+      fine.addEventListener('click', (event) => { 
+        rabbit.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+      })
+    </script>
+  </body>
+</html>
